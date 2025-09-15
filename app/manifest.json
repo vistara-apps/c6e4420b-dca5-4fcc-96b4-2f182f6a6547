@@ -1,0 +1,27 @@
+{
+  "frame": {
+    "version": "1",
+    "name": "Kickback Collective",
+    "homeUrl": "https://kickback-collective.vercel.app",
+    "iconUrl": "https://kickback-collective.vercel.app/icon.png",
+    "splashImageUrl": "https://kickback-collective.vercel.app/splash.png",
+    "splashBackgroundColor": "#1a1a1a",
+    "subtitle": "Your real-time football chat and insights hub",
+    "description": "A community platform for football fans to share live match insights and banter with real-time chat, user-generated content, and fan networking.",
+    "screenshotUrls": [
+      "https://kickback-collective.vercel.app/screenshot1.png",
+      "https://kickback-collective.vercel.app/screenshot2.png",
+      "https://kickback-collective.vercel.app/screenshot3.png"
+    ],
+    "primaryCategory": "social",
+    "tags": ["football", "soccer", "sports", "chat", "community", "live", "insights"],
+    "heroImageUrl": "https://kickback-collective.vercel.app/hero.png",
+    "tagline": "Never miss a moment of the action",
+    "ogTitle": "Kickback Collective - Football Fan Community",
+    "ogDescription": "Join the ultimate football fan community. Share live match insights, engage in real-time banter, and connect with fellow fans.",
+    "ogImageUrl": "https://kickback-collective.vercel.app/og-image.png"
+  },
+  "baseBuilder": {
+    "allowedAddresses": []
+  }
+}
