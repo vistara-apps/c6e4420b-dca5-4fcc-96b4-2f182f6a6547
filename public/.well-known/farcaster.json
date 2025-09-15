@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "Kickback Collective",
+    "subtitle": "Built with Zara",
+    "description": "Kickback Collective is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://c6e4420bdca54fcc96b42f182f6a6547-rlps.vercel.app",
+    "splashImageUrl": "https://c6e4420bdca54fcc96b42f182f6a6547-rlps.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://c6e4420bdca54fcc96b42f182f6a6547-rlps.vercel.app/image.png",
+    "tagline": "Kickback Collective",
+    "screenshotUrls": [
+      "https://c6e4420bdca54fcc96b42f182f6a6547-rlps.vercel.app/screenshot.png",
+      "https://c6e4420bdca54fcc96b42f182f6a6547-rlps.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://c6e4420bdca54fcc96b42f182f6a6547-rlps.vercel.app/api/webhook"
+  }
+}

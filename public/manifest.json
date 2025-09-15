@@ -1,0 +1,14 @@
+{
+  "name": "Kickback Collective",
+  "description": "Kickback Collective is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://c6e4420b-dca5-4fcc-96b4-2f182f6a6547.vercel.app",
+  "properties": {
+    "app": {
+      "name": "Kickback Collective",
+      "description": "Kickback Collective is a Base Mini App built with Zara.",
+      "url": "https://c6e4420b-dca5-4fcc-96b4-2f182f6a6547.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
