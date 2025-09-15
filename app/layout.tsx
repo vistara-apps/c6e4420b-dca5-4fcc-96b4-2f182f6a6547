@@ -3,6 +3,7 @@ import { Providers } from './providers';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kickback-collective.vercel.app'),
   title: 'Kickback Collective',
   description: 'Your real-time football chat and insights hub',
   openGraph: {
