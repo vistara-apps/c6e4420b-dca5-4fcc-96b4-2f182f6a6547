@@ -9,28 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(220, 15%, 95%)',
-        surface: 'hsl(0, 0%, 100%)',
-        primary: 'hsl(240, 80%, 50%)',
-        accent: 'hsl(160, 70%, 40%)',
-        dark: {
-          background: 'hsl(220, 15%, 8%)',
-          surface: 'hsl(220, 15%, 12%)',
-          card: 'hsl(220, 15%, 16%)',
-        }
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        primary: 'var(--primary)',
+        accent: 'var(--accent)',
       },
       borderRadius: {
-        'sm': '6px',
-        'md': '10px',
-        'lg': '16px',
+        sm: 'var(--radius-sm)',
+        md: 'var(--radius-md)',
+        lg: 'var(--radius-lg)',
       },
       spacing: {
-        'sm': '8px',
-        'md': '12px',
-        'lg': '20px',
+        sm: 'var(--spacing-sm)',
+        md: 'var(--spacing-md)',
+        lg: 'var(--spacing-lg)',
       },
       boxShadow: {
-        'card': '0 8px 24px hsla(0, 0%, 0%, 0.10)',
+        card: 'var(--shadow-card)',
+      },
+      transitionDuration: {
+        base: 'var(--duration-base)',
+        fast: 'var(--duration-fast)',
+      },
+      transitionTimingFunction: {
+        'cubic-bezier': 'var(--easing)',
       },
       animation: {
         'fade-in': 'fadeIn 0.25s cubic-bezier(0.22,1,0.36,1)',
