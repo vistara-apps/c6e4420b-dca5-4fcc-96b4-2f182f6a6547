@@ -1,0 +1,99 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId        String   @id @default(cuid())
+  username      String   @unique
+  farcasterId   String?  @unique
+  profilePicUrl String?
+  bio           String?
+  tokenBalance  Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relationships
+  posts         Post[]
+  comments      Comment[]
+  following     User[]   @relation("UserFollows")
+  followers     User[]   @relation("UserFollows")
+  likedPosts    Post[]   @relation("PostLikes")
+  notifications Notification[]
+  teamAffiliations String[]
+
+  @@map("users")
+}
+
+model Match {
+  matchId     String   @id @default(cuid())
+  teams       String[] // [homeTeam, awayTeam]
+  startTime   DateTime
+  endTime     DateTime?
+  status      String   // 'upcoming' | 'live' | 'finished'
+  league      String
+  score       String?  // JSON string: "[homeScore, awayScore]"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relationships
+  posts       Post[]
+
+  @@map("matches")
+}
+
+model Post {
+  postId      String   @id @default(cuid())
+  userId      String
+  matchId     String?
+  content     String
+  timestamp   DateTime @default(now())
+  type        String   // 'insight' | 'banter' | 'discussion'
+  likesCount  Int      @default(0)
+  repliesCount Int     @default(0)
+  isBoosted   Boolean  @default(false)
+  boostCost   Int?     // Cost in tokens to boost visibility
+
+  // Relationships
+  user        User     @relation(fields: [userId], references: [userId], onDelete: Cascade)
+  match       Match?   @relation(fields: [matchId], references: [matchId])
+  comments    Comment[]
+  likedBy     User[]   @relation("PostLikes")
+
+  @@map("posts")
+}
+
+model Comment {
+  commentId   String   @id @default(cuid())
+  postId      String
+  userId      String
+  content     String
+  timestamp   DateTime @default(now())
+
+  // Relationships
+  post        Post     @relation(fields: [postId], references: [postId], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [userId], onDelete: Cascade)
+
+  @@map("comments")
+}
+
+model Notification {
+  notificationId String   @id @default(cuid())
+  userId         String
+  type           String   // 'mention' | 'reply' | 'like' | 'follow'
+  message        String
+  isRead         Boolean  @default(false)
+  createdAt      DateTime @default(now())
+
+  // Relationships
+  user           User     @relation(fields: [userId], references: [userId], onDelete: Cascade)
+
+  @@map("notifications")
+}

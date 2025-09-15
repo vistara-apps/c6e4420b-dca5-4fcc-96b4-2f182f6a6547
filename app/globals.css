@@ -2,15 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design System Tokens */
 :root {
-  --background: hsl(220, 15%, 95%);
+  --bg: hsl(220, 15%, 95%);
   --surface: hsl(0, 0%, 100%);
   --primary: hsl(240, 80%, 50%);
   --accent: hsl(160, 70%, 40%);
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --shadow-card: 0 8px 24px hsla(0, 0%, 0%, 0.10);
+  --spacing-lg: 20px;
+  --spacing-md: 12px;
+  --spacing-sm: 8px;
+  --easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-base: 250ms;
+  --duration-fast: 150ms;
 }
 
 .dark {
-  --background: hsl(220, 15%, 8%);
+  --bg: hsl(220, 15%, 8%);
   --surface: hsl(220, 15%, 12%);
 }
 
